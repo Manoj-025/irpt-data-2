@@ -155,7 +155,7 @@
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(45deg, #a0abad, #5c686c86);
+            background: linear-gradient(45deg, #2152ba, #5c686c86);
             color: white;
             padding: 1rem 2.5rem;
             font-size: 1.1rem;
@@ -204,6 +204,12 @@
         .services {
             padding: 5rem 0;
             background: #f8fafc;
+        }
+        .contact p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.5;
+            animation: slideInUp 1s ease-out 0.2s both;
         }
 
         .container {
