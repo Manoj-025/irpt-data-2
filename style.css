@@ -109,6 +109,10 @@
             overflow: hidden;
            
         }
+        sub{
+            font-family: sans-serif;
+            font-size: 0.5em;
+        }
 
         .hero::before {
             content: '';
@@ -646,7 +650,7 @@
              
             }
             .nav-links {
-                font-size: 0.3em;
+                font-size: 0.7em;
                 gap: 1rem;
             }
 
@@ -662,8 +666,11 @@
                 grid-template-columns: 1fr;
             }
 
-            .services-grid {
-                grid-template-columns: 1fr;
+            .services-grid{
+                grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+            }
+            .service-card h3{
+                font-size: 0.7em;
             }
 
             .process-timeline {
