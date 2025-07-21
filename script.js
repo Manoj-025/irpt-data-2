@@ -49,53 +49,58 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Show form when service card is clicked
-document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('click', () => {
-        document.querySelector('#formWrapper').style.display = 'block';
-        window.scrollTo({ top: document.querySelector('#formWrapper').offsetTop - 20, behavior: 'smooth' });
+ // Open popup on card click
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('click', () => {
+        document.querySelector('#popupModal').style.display = 'flex';
+        showStep(0); // Reset to step 1
+      });
     });
-});
 
-// Form logic
-let current = 0;
-const steps = document.querySelectorAll('.step');
-const sections = document.querySelectorAll('.step-section');
+    // Close popup
+    document.querySelector('#closePopup').addEventListener('click', () => {
+      document.querySelector('#popupModal').style.display = 'none';
+    });
 
-function showStep(index) {
-    sections.forEach(sec => sec.classList.remove('active'));
-    sections[index].classList.add('active');
+    // Form steps logic 
+    let current = 0;
+    const steps = document.querySelectorAll('.step');
+    const sections = document.querySelectorAll('.step-section');
 
-    steps.forEach((step, i) => {
+    function showStep(index) {
+      sections.forEach(sec => sec.classList.remove('active'));
+      sections[index].classList.add('active');
+
+      steps.forEach((step, i) => {
         step.classList.remove('active', 'completed');
         if (i < index) step.classList.add('completed');
         if (i === index) step.classList.add('active');
-    });
-    current = index;
-}
+      });
+      current = index;
+    }
 
-document.querySelectorAll('.next').forEach(btn => {
-    btn.addEventListener('click', () => {
+    document.querySelectorAll('.next').forEach(btn => {
+      btn.addEventListener('click', () => {
         if (current < sections.length - 1) showStep(current + 1);
+      });
     });
-});
 
-document.querySelectorAll('.prev').forEach(btn => {
-    btn.addEventListener('click', () => {
+    document.querySelectorAll('.prev').forEach(btn => {
+      btn.addEventListener('click', () => {
         if (current > 0) showStep(current - 1);
+      });
     });
-});
 
-// Option selection
-document.querySelectorAll('.options').forEach(group => {
-    const options = group.querySelectorAll('.option');
-    options.forEach(option => {
+    // Option select toggle
+    document.querySelectorAll('.options').forEach(group => {
+      const options = group.querySelectorAll('.option');
+      options.forEach(option => {
         option.addEventListener('click', () => {
-            options.forEach(o => o.classList.remove('active'));
-            option.classList.add('active');
+          options.forEach(o => o.classList.remove('active'));
+          option.classList.add('active');
         });
+      });
     });
-});
 
 // form summition
 var formSubmit = document.querySelector('.submit');
