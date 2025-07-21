@@ -14,7 +14,7 @@
 
         /* Header */
         .header {
-            background: linear-gradient(135deg, #ffffffdb 0%, #8aa9e0 100%);
+            background: rgba(233, 231, 231, 0.736);
             
             color: white;
             padding: 0.5,rem 0;
@@ -56,7 +56,7 @@
             left: 0;
             width: 30px;
             height: 3px;
-            background: linear-gradient(90deg, #00d4ff, #0099cc);
+            background:  rgba(233, 231, 231, 0.736);
             border-radius: 2px;
         }
         .h{width: 2em;}
@@ -76,7 +76,7 @@
         }
 
         .nav-links a:hover {
-            color: #00d4ff;
+            color: #a6b0b3;
         }
 
         .nav-links a::after {
@@ -86,7 +86,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: #00d4ff;
+            background: #9ba0a1;
             transition: width 0.3s ease;
         }
 
@@ -97,13 +97,15 @@
         /* Hero Section */
         .hero {
             
-            background-image: url("img/Gemini_Generated_Image_yav8klyav8klyav8.png");
+           background-image: url("img/Gemini_Generated_Image_yav8klyav8klyav8.png");
+           
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center bottom;
+            
           
             color: rgb(0, 0, 0);
-            padding: 8rem 0 4rem;
+            padding: 4.2rem 0 4rem;
             text-align: left;
             position: relative;
             overflow: hidden;
@@ -155,7 +157,7 @@
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(45deg, #2152ba, #5c686c86);
+            background: gray;
             color: white;
             padding: 1rem 2.5rem;
             font-size: 1.1rem;
@@ -201,6 +203,7 @@
         }
 
         /* Services Section */
+       
         .services {
             padding: 5rem 0;
             background: #f8fafc;
@@ -217,12 +220,16 @@
             margin: 0 auto;
             padding: 0 2rem;
         }
-
+        
+        .p1{
+            
+            font-size: 2em;
+        }
         .section-title {
             text-align: center;
             font-size: 2.5rem;
             font-weight: 700;
-            color: #1e3c72;
+            color: #000000;
             margin-bottom: 3rem;
             position: relative;
         }
@@ -235,7 +242,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: linear-gradient(90deg, #00d4ff, #0099cc);
+            background: linear-gradient(90deg, #b4c1c4, #637379);
             border-radius: 2px;
         }
 
@@ -279,26 +286,10 @@
             transform: translateY(-10px);
             box-shadow: 0 20px 50px rgba(0,0,0,0.15);
         }
-
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1rem;
-            background: linear-gradient(135deg, #bcbcbc 0%, #e1dfe5 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: white;
-            position: relative;
-            z-index: 2;
-        }
-
         .service-card h3 {
             font-size: 1.5rem;
             font-weight: 600;
-            color: #1e3c72;
+            color: #020303;
             margin-bottom: 1rem;
             position: relative;
             z-index: 2;
@@ -334,38 +325,9 @@
       100% { transform: translateX(-50%); }
     }
 
-    .product-card {
-      flex: 0 0 250px;
-      margin-right: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      padding: 16px;
-      text-align: center;
-      transition: transform 0.3s;
-    }
+    
 
-    .product-card:hover {
-      transform: scale(1.05);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: contain;
-      margin-bottom: 10px;
-    }
-
-    .product-name {
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .product-price {
-      color: #0078D4;
-      font-weight: 500;
-    }
+    
         .process {
             padding: 5rem 0;
             background: white;
@@ -387,6 +349,8 @@
             border-radius: 20px;
             transition: all 0.3s ease;
         }
+       
+         
 
         .process-step:hover {
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
@@ -394,9 +358,9 @@
         }
 
         .step-number {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 30px;
+            height: 30px;
+            background: black;
             color: white;
             border-radius: 50%;
             display: flex;
@@ -405,7 +369,7 @@
             font-size: 1.5rem;
             font-weight: 700;
             margin: 0 auto 1rem;
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 5px 15px rgba(43, 43, 48, 0.3);
         }
 
         .process-step h3 {
@@ -422,10 +386,29 @@
 
         /* Why Choose Us Section */
         .why-choose {
+        width: 100%;
             padding: 5rem 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background: #f8fafc;
+            text-align: center;
+            
         }
-
+        .why-choose h2 {
+            font-size: 5rem;
+            line-height: 1em;
+        }
+        .why-choose-2{
+            gap: 5em;
+            padding: 10em;
+            text-align: center;
+            color: #0f11159c;
+            
+        }
+        .why-choose-2 h1{
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 1rem;
+        }
         .badges-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -434,42 +417,49 @@
         }
 
         .badge {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
+          
+            
+            
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+           
             transition: all 0.3s ease;
         }
 
-        .badge:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-        }
+       
+           .why-choose img{
+                width: 15em;
+                height: 20em;
+                object-fit: cover;
+                
+            }
 
-        .badge-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1rem;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: white;
-        }
 
         .badge h3 {
-            font-size: 1.3rem;
+            font-size: 4rem;
             font-weight: 600;
-            color: #1e3c72;
+            color: #0000006d;
             margin-bottom: 0.5rem;
         }
 
         .badge p {
-            color: #6b7280;
-            font-size: 0.9rem;
+            color: #030406;
+            font-size: 1.5rem;
+            line-height: 1.0em;
+            word-spacing: 0.1em;
+            font-weight: 600;
+            margin-top: 0;
+        }
+        .badge-icon {
+         margin-top: 2em;
+        }
+        .why-choose-2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .why-choose-2 h1{
+           font-weight: 900;
         }
 
         /* Testimonials Section */
@@ -531,10 +521,12 @@
         /* Contact Section */
         .contact {
             padding: 5rem 0;
-            background: linear-gradient(135deg, #97acb37d 0%, #666b74 100%);
+            background: black;
             color: white;
         }
-
+        .contact h2 {
+          color: #e1dfe5;
+        }
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -543,7 +535,7 @@
         }
 
         .contact-form {
-            background: rgba(201, 174, 174, 0.1);
+            background: rgba(20, 18, 18, 0.1);
             padding: 2rem;
             border-radius: 20px;
             backdrop-filter: blur(10px);
@@ -606,7 +598,7 @@
         .map-placeholder {
             width: 100%;
             height: 300px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #4a4d5a, #69646d);
             border-radius: 15px;
             display: flex;
             align-items: center;
@@ -656,12 +648,15 @@
              
             }
             .nav-links {
-                font-size: 0.7em;
+                font-size: 0.9em;
                 gap: 1rem;
+            }
+            .hero {
+                padding: 1rem 0rem;
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 3.9rem;
             }
 
             .hero p {
@@ -678,13 +673,53 @@
             .service-card h3{
                 font-size: 0.7em;
             }
+            
+            
+            .why-choose img{
+                width: 10em;
+                height: 10em;
+                object-fit: cover;
+            }
+            .why-choose-2{
+                
+                padding: 1em;
+                gap: 1em;
+            }
+            .why-choose-2 h1{
+                font-size: 1.2em;
+            }
+            .why-choose-2 p{
+                font-size: 0.5em;
+            }
 
+            .containerr{
+                            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem
+            }
+            .why-choose h2{
+                font-size: 2em;
+
+            }
+            .badge p{
+                line-height: 1em;
+                font-size: 1.8em;
+            }
+            .badge{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                object-fit: cover;
+            }
             .process-timeline {
                 grid-template-columns: 1fr;
             }
 
             .badges-grid {
-                grid-template-columns: 1fr;
+                padding-top: -0.3em;
+                grid-template-columns: repeat(auto-fit,minmax(100px,2fr));
+                
             }
 
             .testimonials-grid {
