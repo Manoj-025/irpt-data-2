@@ -112,6 +112,21 @@ window.addEventListener('scroll', () => {
 
 //  alert('Thank you for your message! We will contact you within 24 hours to discuss your data recovery needs.');
 //  });
+var form = document.getElementById('submit');
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method: "POST",
+        body: new FormData(document.getElementById("submit")),
+    }).then(
+        response => response.json()
+    )
+        .then((html) => {
+            alert('Submitted !!Thank you ' + document.getElementById('uname').value)
+            window.location.href = '';
+            location.reload();
+        });
+});
 var form = document.getElementById('db-form');
 form.addEventListener("submit", e => {
     e.preventDefault();
