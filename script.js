@@ -103,21 +103,7 @@ window.addEventListener('scroll', () => {
     });
 
 // form summition
-var formSubmit = document.querySelector('.submit');
-formSubmit.addEventListener("submit", e => {
-    e.preventDefault();
-    fetch(formSubmit.action, {
-        method: "POST",
-        body: new FormData(document.querySelector(".submit")),
-    }).then(
-        response => response.json()
-    )
-        .then((html) => {
-            alert('Submitted !!Thank you ' + document.querySelector('#name').value)
-            window.location.href = '';
-            location.reload();
-        });
-});
+
 
 
 
@@ -146,20 +132,4 @@ form.addEventListener("submit", e => {
 const cards = document.querySelectorAll('.service-card, .badge, .testimonial');
 cards.forEach((card, index) => {
     card.style.animationDelay = `${index * 0.1}s`;
-});
-//cliek feature on product cards
-
-document.querySelectorAll('.device-card').forEach(card => {
-    card.addEventListener('click', () => {
-        console.log("clik");
-
-        document.querySelector('.afterselect').style.display = 'block';
-    });
-});
-document.querySelectorAll('.btn').forEach(card => {
-    card.addEventListener('click', () => {
-        console.log("clik");
-
-        document.querySelector('.afterselect').style.display = 'none';
-    });
 });
