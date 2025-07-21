@@ -95,6 +95,90 @@
         </div>
     </section>
 
+      <!-- Form container (hidden until .service-card is clicked) -->
+<div class="modal" id="popupModal">
+    <div class="form-container">
+      <button class="close-btn" id="closePopup">&times;</button>
+    <div class="progress">
+      <div class="step" data-step="0"><div class="circle">1</div><div>Storage</div></div>
+      <div class="step" data-step="1"><div class="circle">2</div><div>Media Problem</div></div>
+      <div class="step" data-step="2"><div class="circle">3</div><div>Urgency</div></div>
+      <div class="step" data-step="3"><div class="circle">4</div><div>Details</div></div>
+      <!-- <div class="step" data-step="4"><div class="circle">5</div><div>Details</div></div> -->
+    </div>
+
+    <!-- Step sections -->
+    <div class="step-section active" data-index="0">
+      <div class="step-title">SELECT CAPACITY OF YOUR DEVICE</div>
+      <div class="options">
+        <div class="option">Upto 128GB</div>
+        <div class="option">256 GB</div>
+        <div class="option">512 GB</div>
+        <div class="option">1 TB</div>
+        <div class="option">2 TB</div>
+        <div class="option">4 TB</div>
+        <div class="option">8 TB</div>
+        <div class="option">10 TB</div>
+        <div class="option">Above 12 TB</div>
+      </div>
+      <div class="buttons">
+        <button class="btn" disabled>Back</button>
+        <button class="btn next">Next</button>
+      </div>
+    </div>
+
+    <div class="step-section" data-index="1">
+      <div class="step-title">WHAT HAPPENED TO YOUR DEVICE?</div>
+      <div class="options">
+        <div class="option">Data Deleted /Formatted</div>
+        <div class="option">Partition Formatted</div>
+        <div class="option">Physical Damage</div>
+        <div class="option">Electronic Damage</div>
+        <div class="option">I don't Kwon</div>
+      </div>
+      <div class="buttons">
+        <button class="btn prev">Back</button>
+        <button class="btn next">Next</button>
+      </div>
+    </div>
+
+    <div class="step-section" data-index="2">
+      <div class="step-title">How urgent is the recovery?</div>
+      <div class="options">
+        <div class="option">Very Urgent</div>
+        <div class="option">Normal</div>
+      </div>
+      <div class="buttons">
+        <button class="btn prev">Back</button>
+        <button class="btn next">Next</button>
+      </div>
+    </div>
+
+    <!-- <div class="step-section" data-index="3">
+      <div class="step-title">Enter your contact details</div>
+      <input type="text" placeholder="Name" style="padding: 10px; width: 100%; margin-bottom: 10px;">
+      <input type="tel" placeholder="Phone" style="padding: 10px; width: 100%;">
+      <div class="buttons">
+        <button class="btn prev">Back</button>
+        <button class="btn next">Next</button>
+      </div>
+    </div> -->
+
+    <form action="https://sheetdb.io/api/v1/ojgu5d5vy8ww5" method="post" id="submit">
+        <div class="step-section" data-index="4">
+      <div class="step-title">Enter your contact details</div>
+      <input id="name" type="text" placeholder="Name" style="padding: 10px; width: 100%; margin-bottom: 10px;">
+      <input type="number" placeholder="Phone" style="padding: 10px; margin-bottom: 10px; width: 100%;">
+      <input type="email" placeholder="Email" style="padding: 10px; width: 100%;">
+      <div class="buttons">
+        <button class="btn prev">Back</button>
+        <button class="btn">Submit</button>
+      </div>
+    </div>
+    </form>
+  </div>
+</div>
+
     <!-- Process Section -->
     <section class="process" id="process">
         <div class="container">

@@ -202,6 +202,189 @@
             }
         }
 
+         .service-card {
+     background: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    /* Modal Background */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 16px;
+    }
+
+    /* Modal Container */
+    .form-container {
+      background: #fff;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      position: relative;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+
+    /* Close Button */
+    .close-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: 20px;
+      background: none;
+      border: none;
+      color: #666;
+      cursor: pointer;
+    }
+
+    .progress {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .progress::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: #ddd;
+      z-index: 0;
+    }
+
+    .step {
+      text-align: center;
+      z-index: 1;
+      flex: 1;
+      color: #aaa;
+    }
+
+    .step .circle {
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      border-radius: 50%;
+      background: #ddd;
+      color: white;
+      margin: 0 auto 6px;
+    }
+
+    .step.active .circle,
+    .step.completed .circle {
+      background: #e53935;
+    }
+
+    .step.active,
+    .step.completed {
+      color: #e53935;
+    }
+
+    .step-section {
+      display: none;
+    }
+
+    .step-section.active {
+      display: block;
+      animation: fade 0.3s ease-in-out;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .step-title {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    .option {
+      padding: 14px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background: #fff;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .option.active {
+      border-color: #e53935;
+      background: #ffebee;
+    }
+
+    .option.active::after {
+      content: "✔";
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background: green;
+      color: #fff;
+      font-size: 12px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 18px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background: #e53935;
+      color: white;
+      font-weight: bold;
+    }
+
+    .btn:disabled {
+      background: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      .options {
+        flex-direction: row;
+      }
+    }
+
         /* Services Section */
        
         .services {
