@@ -40,9 +40,9 @@ window.addEventListener('scroll', () => {
 
     if (currentScroll > 100) {
         header.style.background = 'rgba(161, 160, 160, 0.26)';
-        header.style.backdropFilter = 'blur(10px)';
+        header.style.backdropFilter = 'blur(15px)';
     } else {
-        header.style.background = 'linear-gradient(135deg, #efefefa6 0%, #b7d1d69b 100%)';
+        header.style.background = 'linear-gradient(135deg, #efefefff 0%, #a1a1a1ff 100%)';
         header.style.backdropFilter = 'none';
     }
 
@@ -102,7 +102,43 @@ window.addEventListener('scroll', () => {
       });
     });
 
-// form summition
+//PROCESS SECTION
+   // Scroll-based animation observer
+        const observerOptionsA = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observerA = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all timeline items
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            observer.observe(item);
+        });
+
+        // Enhanced hover effects
+        document.querySelectorAll('.timeline-content').forEach(content => {
+            content.addEventListener('mouseenter', () => {
+                content.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            content.addEventListener('mouseleave', () => {
+                content.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Dynamic step number glow
+        document.querySelectorAll('.step-number').forEach((step, index) => {
+            setTimeout(() => {
+                step.style.animationDelay = `${index * 0.3}s`;
+            }, 100);
+        });
 
 
 

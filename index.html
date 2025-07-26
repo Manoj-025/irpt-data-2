@@ -14,14 +14,12 @@
             </a>
     <!-- Header -->
     <header class="header">
-        <nav class="nav-container">
+        <nav class="nav-container fade-in">
             <a href="#home" class="logo"><img class="h"  src="img/irpt.png" /></a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li> 
-                
-                <li><a href="#process">Process</a></li>
-               
+                <li><a href="#services">Services</a></li>
+                <li><a href="#process">Process</a></li> 
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -34,9 +32,9 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         
-        <div class="hero-content">
+        <div class="hero-content fade-in">
             <h1>ir-pt <sub>Data snap</sub></h1>
-            <p> "slipstream for foreborne leaders" </p>
+            <p> "Slipstream for Foreborne Leaders" </p>
             <a href="#contact" class="cta-button pulse">Get Free Evaluation </a>
         
        
@@ -48,7 +46,7 @@
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container conty">
-            <h2 class="section-title fade-in h34">Our Data Recovery Services</h2>
+            <h2 class="section-title fade-in">Our Data Recovery Services</h2>
             <p class="p1 fade-in">Select your device type</p>
             <div class="services-grid">
                 <div class="service-card fade-in">
@@ -63,7 +61,7 @@
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon"><img src="img/icon-external-hdd.png" alt=""></div>
-                    <h3>Internal HHD Recovery</h3>
+                    <h3>External HHD Recovery</h3>
                    
                 </div>
                 <div class="service-card fade-in">
@@ -96,12 +94,12 @@
     </section>
 
       <!-- Form container (hidden until .service-card is clicked) -->
-<div class="modal" id="popupModal">
+<div class="modal fade-in" id="popupModal">
     <div class="form-container">
       <button class="close-btn" id="closePopup">&times;</button>
     <div class="progress">
       <div class="step" data-step="0"><div class="circle">1</div><div>Storage</div></div>
-      <div class="step" data-step="1"><div class="circle">2</div><div>Media Problem</div></div>
+      <div class="step" data-step="1"><div class="circle">2</div><div>Condition</div></div>
       <div class="step" data-step="2"><div class="circle">3</div><div>Urgency</div></div>
       <div class="step" data-step="3"><div class="circle">4</div><div>Details</div></div>
       <!-- <div class="step" data-step="4"><div class="circle">5</div><div>Details</div></div> -->
@@ -109,7 +107,7 @@
 
     <!-- Step sections -->
     <div class="step-section active" data-index="0">
-      <div class="step-title">SELECT CAPACITY OF YOUR DEVICE</div>
+      <div class="step-title">SELECT SIZE</div>
       <div class="options">
         <div class="option">Upto 128GB</div>
         <div class="option">256 GB</div>
@@ -128,7 +126,7 @@
     </div>
 
     <div class="step-section" data-index="1">
-      <div class="step-title">WHAT HAPPENED TO YOUR DEVICE?</div>
+      <div class="step-title">CONDITIION?</div>
       <div class="options">
         <div class="option">Data Deleted /Formatted</div>
         <div class="option">Partition Formatted</div>
@@ -154,22 +152,14 @@
       </div>
     </div>
 
-    <!-- <div class="step-section" data-index="3">
-      <div class="step-title">Enter your contact details</div>
-      <input type="text" placeholder="Name" style="padding: 10px; width: 100%; margin-bottom: 10px;">
-      <input type="tel" placeholder="Phone" style="padding: 10px; width: 100%;">
-      <div class="buttons">
-        <button class="btn prev">Back</button>
-        <button class="btn next">Next</button>
-      </div>
-    </div> -->
+     
 
     <form action="https://sheetdb.io/api/v1/ojgu5d5vy8ww5" method="post" id="submit">
         <div class="step-section" data-index="4">
       <div class="step-title">Enter your contact details</div>
-      <input id="name" type="text" placeholder="Name" name="data[name]" style="padding: 10px; width: 100%; margin-bottom: 10px;">
-      <input type="number" placeholder="Phone" name="data[phone]" style="padding: 10px; margin-bottom: 10px; width: 100%;">
-      <input type="email" placeholder="Email" name="data[email]" style="padding: 10px; width: 100%;">
+      <input id="name" required type="text" placeholder="Name" name="data[name]" style="padding: 10px; width: 100%; margin-bottom: 10px;">
+      <input type="tel" required placeholder="Phone" name="data[phone]" style="padding: 10px; margin-bottom: 10px; width: 100%;">
+      <input type="email" required placeholder="Email" name="data[email]" style="padding: 10px; width: 100%;">
       <div class="buttons">
         <button class="btn prev">Back</button>
         <button class="btn">Submit</button>
@@ -180,35 +170,84 @@
 </div>
 
     <!-- Process Section -->
-    <section class="process" id="process">
-        <div class="container">
-            <h2 class="section-title fade-in">Our Recovery Process</h2>
-            <div class="process-timeline">
-                <div class="process-step fade-in">
-                    <div class="step-number">1</div>
-                    <h3>Free Evaluation</h3>
-                    <p>Send us your device for a comprehensive diagnostic assessment at no cost.</p>
+   <div class="timeline-container">
+        <div class="section-header">
+            <h1 class="section-title fade-in">Our Recovery Process</h1>
+            <div class="section-subtitle"></div>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item">
+                <div class="step-number">
+                    1
+                    <div class="step-icon">🔍</div>
                 </div>
-                
-                <div class="process-step fade-in">
-                    <div class="step-number">2</div>
-                    <h3>Detailed Analysis</h3>
-                    <p>Our experts analyze the damage and provide a detailed recovery plan and quote.</p>
+                <div class="timeline-content">
+                    <div class="glow-effect"></div>
+                    <div class="content-arrow"></div>
+                    <div class="content-header">
+                        <h3 class="step-title">Free Evaluation</h3>
+                    </div>
+                    <p class="step-description">
+                        Send us your device for a comprehensive diagnostic assessment at no cost. Our expert team will thoroughly examine your device to understand the extent of damage and recovery possibilities.
+                    </p>
                 </div>
-                <div class="process-step fade-in">
-                    <div class="step-number">3</div>
-                    <h3>Recovery Process</h3>
-                    <p>We begin the recovery using state-of-the-art equipment in our ISO certified cleanroom.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="step-number">
+                    2
+                    <div class="step-icon">📊</div>
                 </div>
-                <div class="process-step fade-in">
-                    <div class="step-number">4</div>
-                    <h3>Data Delivery</h3>
-                    <p>Your recovered data is securely delivered on new media with verification report.</p>
+                <div class="timeline-content">
+                    <div class="glow-effect"></div>
+                    <div class="content-arrow"></div>
+                    <div class="content-header">
+                        <h3 class="step-title">Detailed Analysis</h3>
+                    </div>
+                    <p class="step-description">
+                        Our experts analyze the damage and provide a detailed recovery plan and quote. We use advanced diagnostic tools to create a comprehensive roadmap for your data recovery process.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="step-number">
+                    3
+                    <div class="step-icon">⚙️</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="glow-effect"></div>
+                    <div class="content-arrow"></div>
+                    <div class="content-header">
+                        <h3 class="step-title">Recovery Process</h3>
+                    </div>
+                    <p class="step-description">
+                        We begin the recovery using state-of-the-art equipment in our ISO certified cleanroom. Our specialized facilities ensure the highest success rates for even the most complex recovery cases.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="step-number">
+                    4
+                    <div class="step-icon">📦</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="glow-effect"></div>
+                    <div class="content-arrow"></div>
+                    <div class="content-header">
+                        <h3 class="step-title">Data Delivery</h3>
+                    </div>
+                    <p class="step-description">
+                        Your recovered data is securely delivered on new media with verification report. We ensure complete data integrity and provide detailed documentation of the recovery process and results.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
     <!-- Why Choose Us Section -->
     <section class="why-choose" id="about">
         <div class="containerr">
@@ -286,15 +325,15 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" name="data[email]" placeholder="your@email.com" required>
+                            <input type="email" id="email" name="data[email]" placeholder="xyz@email.com" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="data[phone]" placeholder="(555) 123-4567">
+                            <input type="tel" id="phone" name="data[phone]" placeholder="+91 (555) 123-4567">
                         </div>
                         <div class="form-group">
                             <label for="device">Device Type</label>
-                            <input type="text" id="device" name="data[device]" placeholder="Hard Drive, SSD, RAID, etc.">
+                            <input type="text" id="device" name="data[device]" placeholder="Hard Drive, SSD, etc.">
                         </div>
                         <div class="form-group">
                             <label for="message">Describe Your Issue</label>
@@ -303,16 +342,11 @@
                         <button type="submit" class="submit-btn">Send Message</button>
                 </div>
                 <div class="map-container fade-in">
-                    <h3>Our Location</h3>
-                    <div class="map-placeholder">
-                     <a href="https://www.google.com/maps/search/Pharmaceutical+company/@23.2813739,77.4372197,16z/data=!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDcwNy4wIKXMDSoASAFQAw%3D%3D">  <img src="C:\Users\Manoj Kushwah\Pictures\Screenshots" alt=""></a>
-                    </div>
-                    <div style="margin-top: 2rem;">
-                        <p><strong>📍 Address:</strong> SAGAR LAND MARK</p>
-                        <p><strong>📞 Phone:</strong> +91 9669221208</p>
-                        <p><strong>✉️ Email:</strong> edu.irpt@gmail.com</p>
-                        
-                    </div>
+             
+                   
+                
+                        <img class="happy" src="img/ChatGPT Image Jul 26, 2025, 02_28_47 PM.png" alt="">
+                    
                 </div>
             </div>
         </div>
